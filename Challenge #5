@@ -1,0 +1,28 @@
+public class Challenge5 {
+	public static void main(String[] args){
+		// TODO Auto-generated method stub
+
+		String s = "swiss";
+		int repCount = 0;
+		for (int i = 0; i < s.length(); i++) {
+			repCount = 0;
+			for (int j = 0; j < s.length(); j++) {
+				System.out.println("i :" + s.charAt(i));
+				System.out.println("j :" + s.charAt(j));
+				if (i != j) {
+					if (s.charAt(i) == s.charAt(j)) {
+						repCount = 1;
+						break;
+					}
+				}
+			}
+			if (repCount == 0) {
+				System.out.println("First non-repeted character is :"+ s.charAt(i));
+				break;
+			}
+		}
+		if(repCount != 0 ){
+			System.out.println("All the characters are repeting in the String :"+s);
+		}
+	}
+}
